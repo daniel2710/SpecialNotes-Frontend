@@ -13,12 +13,19 @@ export default function Home() {
   const { variants, spring, cursorVariant, setCursorVariant } = useVariantsCursor(ref);
 
   return (
-    <main ref={ref}>
-      <Navbar/>
-      <Header setCursorVariant={setCursorVariant} />
-      <Features/>
-      <References/>
-      <motion.div variants={variants} className="circle z-[90000] fixed top-0 left-0 h-8 w-8 pointer-events-none rounded-[50%]" animate={cursorVariant} transition={spring} />
-    </main>
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5 }}
+    >
+      <main ref={ref}>
+        <Navbar/>
+        <Header setCursorVariant={setCursorVariant} />
+        <Features/>
+        <References/>
+        <motion.div variants={variants} className="circle z-[90000] fixed top-0 left-0 h-8 w-8 pointer-events-none rounded-[50%]" animate={cursorVariant} transition={spring} />
+      </main>
+    </motion.div>
   )
 }
