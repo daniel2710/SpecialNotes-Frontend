@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import Button from '@/components/buttons/Button';
+import Button from '@/components/UI/buttons/Button';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import Link from 'next/link';
 import ColFlag from '@/components/UI/ColFlag';
