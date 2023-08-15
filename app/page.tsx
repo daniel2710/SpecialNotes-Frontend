@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import Features from "./components/landing/Features";
 import Header from "./components/landing/Header";
-import Navbar from "./components/landing/Navbar";
+import Navbar from "./components/landing/navigation/Navbar";
 import References from "./components/landing/References";
 import { motion } from 'framer-motion';
 import { useVariantsCursor } from 'hooks/UX-UI/useVariantsCursor';

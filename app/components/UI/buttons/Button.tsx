@@ -24,7 +24,7 @@ const Button: FC<Props> = ({ text, color = 'Default', type = 'button', isLoading
     }
 
     return (
-        <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-black text-white'}`}>{isLoading ? 'loading...' : text}</button>
+        <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-black text-white hover:bg-hoverBlack transition-all duration-200'}`}>{isLoading ? 'loading...' : text}</button>
     )
 
 }

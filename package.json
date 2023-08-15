@@ -17,6 +17,7 @@
     "canvas-confetti": "^1.6.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
+    "formik": "^2.4.3",
     "framer-motion": "^10.15.1",
     "next": "13.4.10",
     "postcss": "8.4.26",
@@ -24,7 +25,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.6.0"

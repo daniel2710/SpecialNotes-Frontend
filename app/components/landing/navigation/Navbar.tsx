@@ -1,9 +1,9 @@
 'use client'
 import { useEffect, useState } from "react";
 import Button from "@/components/UI/buttons/Button"
-import IconNav from "./IconNav";
+import IconNav from "../IconNav";
 import confetti from 'canvas-confetti';
-import InfoModal from "./modals/InfoModal";
+import InfoModal from "../modals/InfoModal";
 import { FiInfo } from 'react-icons/fi'
 import Link from "next/link";
 
@@ -14,7 +14,7 @@ const Navbar = () => {
         confetti({
             particleCount: 100,
             spread: 70,
-            origin: { x: 1 }
+            origin: { x: 1 }  
         });
     }, [])
 
@@ -27,9 +27,11 @@ const Navbar = () => {
             <div className="flex gap-5 items-center">
                 <div className="flex items-center gap-2">
                     <FiInfo onClick={()=>setShowModal(true)} className="w-5 h-5 cursor-pointer" />
-                    <Button color="Default" text="Login" type="button" />
-                    <Link prefetch href='/register'>
-                        <Button color="Default" text="Register" type="button" />
+                    <Link prefetch href='/signin'>
+                        <Button color="Default" text="Sign In" type="button" />
+                    </Link>
+                    <Link prefetch href='/signup'>
+                        <Button color="White" text="Sign Up" type="button" />
                     </Link>
                 </div>
             </div>
