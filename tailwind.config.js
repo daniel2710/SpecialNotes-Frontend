@@ -11,6 +11,7 @@ module.exports = {
         "main": '#f2f2f2',
         "alert": "#e31010",
         "success": "#07e633",
+        "hoverBlack": "#333333"
       },
     },
   },
