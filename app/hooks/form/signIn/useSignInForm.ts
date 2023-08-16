@@ -9,7 +9,7 @@ export const useSignInForm = () =>{
     const formik = useFormik<SignInType>({
         validationSchema: SignInFormValidate,
 		initialValues: {
-            email: '',
+            username: '',
             password: '',
 		},
 		onSubmit: (values) => {

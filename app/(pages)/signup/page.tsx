@@ -31,15 +31,15 @@ const SignUpPage = () => {
               <div className='flex items-center'>
                 <label className='text-base font-medium w-32'>Name</label>
                 <div className='relative w-full'>
-                  <Input name="first_name" value={values.first_name} onChange={handleChange} type='text' placeholder='Enter your name' />
-                  {errors.first_name && ( <p className='absolute top-9 text-sm mt-1 font-medium text-red-700'>{errors.first_name}</p> )}
+                  <Input name="name" value={values.name} onChange={handleChange} type='text' placeholder='Enter your name' />
+                  {errors.name && ( <p className='absolute top-9 text-sm mt-1 font-medium text-red-700'>{errors.name}</p> )}
                 </div>
               </div>
               <div className='flex items-center'>
                 <label className='text-base font-medium w-32'>Lastname</label>
                 <div className='relative w-full'>
-                  <Input name="last_name" value={values.last_name} onChange={handleChange} type='text' placeholder='Enter your lastname' />
-                  {errors.last_name && ( <p className='absolute top-9 text-sm mt-1 font-medium text-red-700'>{errors.last_name}</p> )}
+                  <Input name="lastname" value={values.lastname} onChange={handleChange} type='text' placeholder='Enter your lastname' />
+                  {errors.lastname && ( <p className='absolute top-9 text-sm mt-1 font-medium text-red-700'>{errors.lastname}</p> )}
                 </div>
               </div>
               <div className='flex items-center'>
@@ -49,13 +49,13 @@ const SignUpPage = () => {
                   {errors.username && ( <p className='absolute top-9 text-sm mt-1 font-medium text-red-700'>{errors.username}</p> )}
                 </div>
               </div>
-              <div className='flex items-center'>
+              {/* <div className='flex items-center'>
                 <label className='text-base font-medium w-32'>Email</label>
                 <div className='relative w-full'>
                   <Input name="email" value={values.email} onChange={handleChange} type='text' placeholder='Enter a email' />
                   {errors.email && ( <p className='absolute top-9 text-sm mt-1 font-medium text-red-700'>{errors.email}</p> )}
                 </div>
-              </div>
+              </div> */}
               <div className='flex items-center'>
                 <label className='text-base font-medium w-32'>Password</label>
                 <div className='relative w-full'>
