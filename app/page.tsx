@@ -24,7 +24,9 @@ export default function Home() {
         <Header setCursorVariant={setCursorVariant} />
         <Features/>
         <References/>
-        <motion.div variants={variants} className="circle z-[90000] fixed top-0 left-0 h-8 w-8 pointer-events-none rounded-[50%]" animate={cursorVariant} transition={spring} />
+        <div className="hidden xl:block">
+          <motion.div variants={variants} className="circle z-[90000] fixed top-0 left-0 h-8 w-8 pointer-events-none rounded-[50%]" animate={cursorVariant} transition={spring} />
+        </div>
       </main>
     </motion.div>
   )

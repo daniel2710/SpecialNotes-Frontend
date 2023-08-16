@@ -1,13 +1,13 @@
 export type SignUpType = {
-    first_name: string;
-    last_name: string;
-    email: string;
+    name: string;
+    lastname: string;
+    email?: string;
     username: string;
     password: string;
     confirm_password: string;
 }
 
 export type SignInType = {
-    email: string;
+    username: string;
     password: string;
 }

@@ -32,8 +32,8 @@ const SignInPage = () => {
               <div className='flex items-center'>
                 <label className='text-base font-medium w-32'>Email</label>
                 <div className='relative w-full'>
-                  <Input name="email" value={values.email} onChange={handleChange} type='text' placeholder='Enter a email' />
-                  {errors.email && ( <p className='absolute top-9 text-sm mt-1 font-medium text-red-700'>{errors.email}</p> )}
+                  <Input name="username" value={values.username} onChange={handleChange} type='text' placeholder='Enter a username' />
+                  {errors.username && ( <p className='absolute top-9 text-sm mt-1 font-medium text-red-700'>{errors.username}</p> )}
                 </div>
               </div>
               <div className='flex items-center'>
