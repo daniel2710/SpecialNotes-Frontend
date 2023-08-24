@@ -1,7 +1,9 @@
+"use client"
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import Providers from './utils/reactQuery/Provider';
 import './globals.css'
+import { SidebarContextProvider } from './context/UI/sidebar';
 
 const poppins = Poppins({ style: 'normal', weight: [ '100', '200', '300', '400', '500', '700', '800'], subsets: ['latin'] })
 
@@ -20,7 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <SidebarContextProvider>
+            {children}
+          </SidebarContextProvider>
+        </Providers>
       </body>
     </html>
   )

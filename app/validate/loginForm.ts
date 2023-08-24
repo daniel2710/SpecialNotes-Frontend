@@ -10,6 +10,6 @@ export const SignUpFormValidate = yup.object().shape({
 })
 
 export const SignInFormValidate = yup.object().shape({
-    username: yup.string().email("Enter a valid email").required("! required field."),
-    password: yup.string().trim().required("! required field.").min(8, 'Minimum 8 characters'),
+    username: yup.string().required("! required field."),
+    password: yup.string().trim().required("! required field."),
 })

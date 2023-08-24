@@ -8,12 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "main": '#f2f2f2',
+        "light": '#f2f2f2',
+        "rich-black": '#171a21',
+        "paynes": '#617073',
         "alert": "#e31010",
         "success": "#07e633",
         "hoverBlack": "#333333"
       },
     },
   },
-  plugins: [],
+  plugins: [
+ 
+  ]
 }

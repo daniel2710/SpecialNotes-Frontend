@@ -3,7 +3,7 @@ import messageIcon from '../../../public/icons/message.svg';
 
 const Features = () => {
   return (
-    <section className='bg-main flex flex-col gap-10 pt-10 py-5 px-5 md:gap-2 xl:px-32'>
+    <section className='bg-rich-black text-light flex flex-col gap-10 pt-10 py-5 px-5 md:gap-2 xl:px-32'>
       <h3 className='text-center text-3xl font-medium'>Features</h3>
       <div className='justify-between gap-4 flex flex-col md:py-10 xl:grid xl:grid-cols-3'>
         <div className='flex justify-center items-center flex-col gap-2'> 
