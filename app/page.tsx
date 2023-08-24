@@ -20,7 +20,7 @@ export default function Home() {
       transition={{ duration: 0.5 }}
     >
       <main ref={ref}>
-        <Navbar/>
+        <Navbar/>  
         <Header setCursorVariant={setCursorVariant} />
         <Features/>
         <References/>

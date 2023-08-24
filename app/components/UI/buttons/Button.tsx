@@ -2,7 +2,7 @@ import { FC, HTMLProps } from 'react'
 
 interface Props extends HTMLProps<HTMLButtonElement>{
     text: string;
-    color: 'White' | 'Success' | 'Alert' | 'Default' 
+    color: 'Light' | 'Success' | 'Alert' | 'Default' 
     type: ButtonType
     isLoading?: boolean
 }
@@ -19,12 +19,12 @@ const Button: FC<Props> = ({ text, color = 'Default', type = 'button', isLoading
         case 'Success':
             return <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-success text-white'}`}>{isLoading ? 'loading...' : text}</button>
         
-        case 'White':
-            return <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-white text-black'}`}>{isLoading ? 'loading...' : text}</button>
+        case 'Light':
+            return <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-light' : 'bg-light text-rich-black'}`}>{isLoading ? 'loading...' : text}</button>
     }
 
     return (
-        <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-black text-white hover:bg-hoverBlack transition-all duration-200'}`}>{isLoading ? 'loading...' : text}</button>
+        <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-main text-white hover:bg-hoverdark transition-all duration-200'}`}>{isLoading ? 'loading...' : text}</button>
     )
 
 }

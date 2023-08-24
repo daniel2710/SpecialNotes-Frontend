@@ -4,21 +4,21 @@
   
 @keyframes bgs {
     0% {
-        fill: black;
+        fill: #f2f2f2 !important;
     }
     20% {
-        fill: #fccf03;
+        fill: #fccf03 !important;
     }
     40% {
-        fill: #03fc2c;
+        fill: #03fc2c !important;
     }
     60% {
-        fill: #f50041;
+        fill: #f50041 !important;
     }
     80% {
-        fill: blueviolet;
+        fill: blueviolet !important;
     }
     100% {
-        fill: black; /* Volvemos al color inicial para cerrar el ciclo */
+        fill: #f2f2f2 !important; 
     }
 }

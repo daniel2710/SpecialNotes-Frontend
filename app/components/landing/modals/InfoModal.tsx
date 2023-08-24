@@ -15,10 +15,10 @@ const InfoModal: FC<Props> = ({ setShowModal }) => {
           <div className="fixed inset-0 transition-opacity">
             <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
           </div>
-          <div className="bg-white rounded-lg p-6 w-[700px] transform transition-all ease-out duration-300 mx-2">
+          <div className="bg-rich-black text-light rounded-lg p-6 w-[700px] transform transition-all ease-out duration-300 mx-2">
             <div className='flex gap-2 items-center'>
               <ColFlag/> 
-              <h4 className=' text-black font-medium'>Developed and marketed by: <span className='font-semibold'>Daniel Steven De Avila Peñate</span></h4>
+              <h4 className=' text-main font-medium'>Developed and marketed by: <span className='font-semibold'>Daniel De Avila</span></h4>
             </div>
             <div className='flex flex-col gap-2 mt-3'>
               <Link href='https://github.com/daniel2710' target='_blank' className='flex items-center gap-2 w-fit'>
@@ -30,8 +30,11 @@ const InfoModal: FC<Props> = ({ setShowModal }) => {
                 <p>Daniel De Avila</p>
               </Link>
             </div>
+            <div className="mt-2">
+              <p>&copy; 2023 SpecialNotes. All rights reserved.</p>
+            </div>
             <div className="mt-4">
-              <Button onClick={()=>setShowModal(false)} color="Default" text="Close" type="button" />
+              <Button onClick={()=>setShowModal(false)} color="Light" text="Close" type="button" />
             </div>
           </div>
         </div>
