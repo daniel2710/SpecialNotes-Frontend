@@ -3,14 +3,20 @@ import Note from "@/components/notes/Note";
 import NewNote from "@/components/views/home/NewNote";
 import { useGetAllNotes } from "@/hooks/notes/useGetAllNotes";
 import { Notes } from "@/interfaces/notes/notes";
-import { dataExample } from "@/utils/dataExample";
+import { useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { IoAddCircleSharp } from "react-icons/io5";
+import { ToastContainer } from "react-toastify";
 
 const Home = () => {
+  const updateData = () =>{
+    queryClient.invalidateQueries({ queryKey:['allNotes']});
+  }
+  const queryClient = useQueryClient()
   const { notes, isLoading } = useGetAllNotes()
   const [ showNote, setShowNote ] = useState(false)
+
 
   return (
     <section className="bg-paynes pl-2 py-2">
@@ -25,19 +31,20 @@ const Home = () => {
           <p className="text-base text-light">New note</p>
         </div>}
 
-        {showNote && <NewNote setShowNote={setShowNote} />}
+        {showNote && <NewNote updateData={updateData} setShowNote={setShowNote} />}
 
         <div className="flex flex-col gap-2 mt-5">
           {notes?.length > 0 && <div>
             <h1 className="text-3xl text-light">My notes</h1>
           </div>}
           <div className="flex flex-col gap-3 mt-3">
-            {notes?.map((item: Notes, index: number)=>(
+            {notes?.map((item: Notes, index: number)=>(  
               <Note bg={item?.settings?.backgroundColor!} title={item?.title!} content={item?.content!} pinned={item?.settings?.pinned!} key={index} />
             ))}
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </section>
   )
 }
