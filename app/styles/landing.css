@@ -1,0 +1,24 @@
+.iconNav {
+    animation: bgs 5s infinite;
+}
+  
+@keyframes bgs {
+    0% {
+        fill: #f2f2f2 !important;
+    }
+    20% {
+        fill: #fccf03 !important;
+    }
+    40% {
+        fill: #03fc2c !important;
+    }
+    60% {
+        fill: #f50041 !important;
+    }
+    80% {
+        fill: blueviolet !important;
+    }
+    100% {
+        fill: #f2f2f2 !important; 
+    }
+}
