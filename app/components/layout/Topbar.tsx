@@ -12,7 +12,7 @@ const Topbar = () => {
     const { active, setActive } = useContext(SidebarContext) 
 
     return (
-        <nav className='w-full h-[7%] bg-rich-black text-light md:h-[8%]'>
+        <nav className='z-50 w-full h-[7%] bg-rich-black text-light md:h-[8%]'>
             <div className='flex h-full w-full items-center md:pl-20'>
                 <div className="p-1 pl-4 md:hidden">
                     {active ? <AiOutlineCloseCircle onClick={()=>setActive(false)} className='h-8 w-8' /> 

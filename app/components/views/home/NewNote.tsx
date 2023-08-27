@@ -8,12 +8,13 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 
 interface Props{
     setShowNote: (state: boolean)=>void;
+    updateData: ()=>void;
 }  
 
-const NewNote: FC<Props> = ({ setShowNote }) => {
+const NewNote: FC<Props> = ({ setShowNote, updateData }) => {
     const { values, handleSubmit, handleChange, pinned, setPinned, showOptionsPint, setShowOptionsPint, backgroundColor,
         textColor, handleColorChange, archived, setArchived
-    } = useNewNoteForm(setShowNote)
+    } = useNewNoteForm(setShowNote, updateData)
 
     return (
             <form onSubmit={handleSubmit} className="flex flex-col">

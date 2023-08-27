@@ -13,7 +13,7 @@ const Sidebar = () => {
   const { active } = useContext(SidebarContext)  
 
   return (
-    <nav className={`sidebar z-[999999] p-1 absolute h-full ${active ? 'w-36' : 'w-16'} md:hover:w-36 transition-all duration-200 bg-rich-black text-white`}>
+    <nav className={`sidebar z-50 p-1 absolute h-full ${active ? 'w-36' : 'w-16'} md:hover:w-36 transition-all duration-200 bg-rich-black text-white`}>
       <div className="h-full flex flex-col justify-between items-center">
         <ul className='flex flex-col gap-5 pt-3'>
           {itemsSidebar.map((item, index) => {
