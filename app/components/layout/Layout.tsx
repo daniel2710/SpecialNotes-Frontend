@@ -15,9 +15,9 @@ const Layout = ({ content }: layoutProps) => {
   return (
     <main className='bg-light h-screen w-screen max-h-screen max-w-screen'>
       <Topbar/>
-      <div className='flex h-[calc(100vh-6.5%)] w-full relative md:h-[calc(100vh-8%)]'>
+      <div className='flex h-[calc(100vh-7%)] w-full relative md:h-[calc(100vh-8%)]'>
         <Sidebar/>
-        <section onClick={()=>setActive(false)} className='w-full h-full ml-16 pl-2 pt-2'>
+        <section onClick={()=>setActive(false)} className='w-full h-full ml-16 bg-paynes scrollbar max-h-[calc(100vh-7%)] md:max-h-[calc(100vh-8%)]'>
           {content}
         </section>
       </div>

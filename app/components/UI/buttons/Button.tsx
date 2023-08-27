@@ -11,7 +11,7 @@ type ButtonType = 'button' | 'submit' | 'reset'
 
 const Button: FC<Props> = ({ text, color = 'Default', type = 'button', isLoading = false, ...props }) => {
   
-    const className = 'text-base rounded-lg font-medium py-2 px-2 md:px-5 xl:text-xl'  
+    const className = 'text-base rounded-lg font-medium py-1 px-2 md:px-4 md:py-2 xl:text-xl'  
     switch (color) {
         case 'Alert':
             return <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-alert text-white'}`}>{isLoading ? 'loading...' : text}</button>
