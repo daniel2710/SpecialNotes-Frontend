@@ -1,9 +1,9 @@
 import Layout from "@/components/layout/Layout"
-import Home from "@/views/home/Home"
+import Settings from "@/views/settings/Settings"
 
 const page = () => {
   return (
-    <Layout content={<Home/>} />  
+    <Layout content={<Settings/>} />
   )
 }
 

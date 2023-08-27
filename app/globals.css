@@ -2,3 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 @import 'react-toastify/dist/ReactToastify.css';
+
+/* Scrollbar */
+.scrollbar{
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.scrollbar::-webkit-scrollbar{
+    height: 5px;
+    width: 5px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb{
+    background: #0054dc;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}

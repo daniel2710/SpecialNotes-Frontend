@@ -19,7 +19,7 @@ export const itemsSidebar: SidebarItem[] = [
     {
         icon: 'BiSolidNote',
         title: 'Notes',
-        route: '/'
+        route: '/home'
     },
     {
         icon: 'BiSolidArchiveIn',
