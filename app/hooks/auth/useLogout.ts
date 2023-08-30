@@ -9,8 +9,9 @@ export const useLogout = () =>{
 
     const logout = () =>{
         Cookies.remove('SPECIALNOTES-AUTH')
+        Cookies.remove('user-logged')
         setActive(false)
-        router.push('/')
+        router.replace('/signin')
     }
 
     return { logout }

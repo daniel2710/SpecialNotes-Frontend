@@ -3,14 +3,15 @@ import { baseURL } from "@/services/axios";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 
-const createNoteService = async (data: NoteType) =>{
-    const res = await baseURL.post(`/notes`, data);
+const deleteNoteService = async (data: NoteType) =>{
+    const res = await baseURL.delete(`/notes/${data?._id}`);
     return res.data;
 }
 
-export const useCreateNote = () =>{  
-    const createNoteFc = useMutation({ 
-        mutationFn: createNoteService,
+export const useDeleteNote = (setShowNote : (state: boolean)=>void, updateData: ()=>void) =>{  
+    
+    const deleteNoteFc = useMutation({ 
+        mutationFn: deleteNoteService,
         onMutate: ()=>{
             toast.loading("Sending...", {
                 position: "top-center",
@@ -25,7 +26,9 @@ export const useCreateNote = () =>{
         },
         onSuccess: () =>{
             toast.dismiss();
-            toast.success("Note created successfully", {
+            setShowNote(false)
+            updateData()
+            toast.success("Note deleted successfully", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -35,9 +38,12 @@ export const useCreateNote = () =>{
                 progress: undefined,
                 theme: "dark",
             });
+            
         },
         onError: () =>{
             toast.dismiss();
+            setShowNote(false)
+            updateData()
             toast.error("Error, try again", {
                 position: "top-center",
                 autoClose: 2000,
@@ -51,6 +57,6 @@ export const useCreateNote = () =>{
         }
     })
 
-    return { createNoteFc }
+    return { deleteNoteFc }
 
 }

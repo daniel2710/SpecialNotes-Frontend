@@ -19,7 +19,7 @@ module.exports = {
         "rich-black": '#171a21',
         "paynes": '#617073',
         // UI
-        "alert": "#e31010",
+        "alert": "#FE0000",
         "success": "#07e633",
         "hoverBlack": "#333333",
         // Options bg notes:
@@ -30,6 +30,6 @@ module.exports = {
     },
   },
   plugins: [
- 
+    require("daisyui")
   ]
 }

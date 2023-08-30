@@ -14,17 +14,17 @@ const Button: FC<Props> = ({ text, color = 'Default', type = 'button', isLoading
     const className = 'text-base rounded-lg font-medium py-1 px-2 md:px-4 md:py-2 xl:text-xl'  
     switch (color) {
         case 'Alert':
-            return <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-alert text-white'}`}>{isLoading ? 'loading...' : text}</button>
+            return <button {...props} type={type} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-alert text-white'}`}>{isLoading ? 'loading...' : text}</button>
         
         case 'Success':
-            return <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-success text-white'}`}>{isLoading ? 'loading...' : text}</button>
+            return <button {...props} type={type} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-success text-white'}`}>{isLoading ? 'loading...' : text}</button>
         
         case 'Light':
-            return <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-light' : 'bg-light text-rich-black'}`}>{isLoading ? 'loading...' : text}</button>
+            return <button {...props} type={type} className={`${className} ${props.disabled ? 'bg-disabled text-light' : 'bg-light text-rich-black'}`}>{isLoading ? 'loading...' : text}</button>
     }
 
     return (
-        <button {...props} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-main text-white hover:bg-hoverdark transition-all duration-200'}`}>{isLoading ? 'loading...' : text}</button>
+        <button {...props} type={type} className={`${className} ${props.disabled ? 'bg-disabled text-white' : 'bg-rich-black text-light hover:bg-hoverdark transition-all duration-200'}`}>{isLoading ? 'loading...' : text}</button>
     )
 
 }
