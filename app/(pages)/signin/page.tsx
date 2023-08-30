@@ -5,7 +5,7 @@ import { redirect } from "next/navigation"
 async function getValidateToken() {
   const cookieStore = cookies()
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/token/${cookieStore?.get('SPECIALNOTES-AUTH')!.value}`, { cache: "no-cache" })
+    const res = await fetch(`https://specialnotesback.onrender.com/users/token/${cookieStore?.get('SPECIALNOTES-AUTH')!.value}`, { cache: "no-cache" })
     const user = await res.json()
     return user
   } catch (error) {

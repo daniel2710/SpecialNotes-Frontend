@@ -4,7 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 
 const signUpService = async (data: SignUpType) =>{
-    const res = await baseURL.post(`auth/register`, data);
+    const res = await baseURL.post(`/auth/register`, data);
     return res.data;
 }
 

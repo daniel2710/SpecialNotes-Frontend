@@ -8,7 +8,7 @@ export const useGetAllNotes = (idUser: string, active?: boolean, archived?: bool
 
   const { data, isLoading, error } = useQuery(["allNotes", currentPage, search, idUser],  
     async () => {
-      const res = await baseURL.get(`notes/user/${idUser}?page=${currentPage}&search=${search}&active=${active}&archived=${archived}`);
+      const res = await baseURL.get(`/notes/user/${idUser}?page=${currentPage}&search=${search}&active=${active}&archived=${archived}`);
       return res.data;
     },
     {

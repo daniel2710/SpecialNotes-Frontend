@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
 const signInService = async (data: SignInType) =>{
-    const res = await baseURL.post(`auth/login`, data);
+    const res = await baseURL.post(`/auth/login`, data);
     return res.data;
 }
 
