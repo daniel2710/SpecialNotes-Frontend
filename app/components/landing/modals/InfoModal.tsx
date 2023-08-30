@@ -11,7 +11,7 @@ export interface Props{
 const InfoModal: FC<Props> = ({ setShowModal }) => {
 
   return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
+      <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="fixed inset-0 transition-opacity">
             <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
           </div>
@@ -37,7 +37,7 @@ const InfoModal: FC<Props> = ({ setShowModal }) => {
               <Button onClick={()=>setShowModal(false)} color="Light" text="Close" type="button" />
             </div>
           </div>
-        </div>
+      </div>
   )
 }
 

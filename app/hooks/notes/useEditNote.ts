@@ -3,14 +3,15 @@ import { baseURL } from "@/services/axios";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 
-const createNoteService = async (data: NoteType) =>{
-    const res = await baseURL.post(`/notes`, data);
+const editNoteService = async (data: NoteType) =>{
+    const res = await baseURL.patch(`/notes/${data?._id}`, data);
     return res.data;
 }
 
-export const useCreateNote = () =>{  
-    const createNoteFc = useMutation({ 
-        mutationFn: createNoteService,
+export const useEditNote = () =>{  
+    
+    const editNoteFc = useMutation({ 
+        mutationFn: editNoteService,
         onMutate: ()=>{
             toast.loading("Sending...", {
                 position: "top-center",
@@ -25,7 +26,7 @@ export const useCreateNote = () =>{
         },
         onSuccess: () =>{
             toast.dismiss();
-            toast.success("Note created successfully", {
+            toast.success("Note modified successfully", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -35,6 +36,7 @@ export const useCreateNote = () =>{
                 progress: undefined,
                 theme: "dark",
             });
+            
         },
         onError: () =>{
             toast.dismiss();
@@ -51,6 +53,6 @@ export const useCreateNote = () =>{
         }
     })
 
-    return { createNoteFc }
+    return { editNoteFc }
 
 }

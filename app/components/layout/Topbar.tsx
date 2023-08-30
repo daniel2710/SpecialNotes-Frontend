@@ -3,13 +3,17 @@ import { useContext } from 'react';
 import { SidebarContext } from '@/context/UI/sidebar';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { IoSettingsSharp } from 'react-icons/io5';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import Cookies from 'js-cookie';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Topbar = () => {
-    const patch = usePathname();
-    const { active, setActive } = useContext(SidebarContext) 
+    const [ name, setName ] = useState('')
+    const { active, setActive } = useContext(SidebarContext)
+
+    useEffect(()=>{
+        setName(JSON.parse(Cookies.get('user-logged') || 'U').name || 'U')
+    }, [name])
 
     return (
         <nav className='z-50 w-full h-[7%] bg-rich-black text-light md:h-[8%]'>
@@ -22,13 +26,17 @@ const Topbar = () => {
 
                 <div className='flex justify-between w-full items-center'>
                     <div className='ml-7 md:ml-0'>
-                        <h1 className='text-xl'>SpecialNotes</h1>
+                        <h1 className='text-base md:text-2xl'>SpecialNotes</h1>
                     </div>
-                    <ul className="pr-1">
-                        <Link href='/settings' className={`flex justify-center py-1 items-center ${patch === '/settings' && 'bg-paynes rounded-full px-1'}`}>
-                            <IoSettingsSharp className="h-8 w-8" />
-                        </Link>
-                    </ul>
+                    {name && <div className="pr-1 flex gap-3 items-center">
+                        <div className="hidden md:block">
+                            <p className="text-sm md:text-2xl">Welcome, {name}</p>
+                        </div>
+
+                        <div className='flex justify-center h-10 w-10 items-center bg-paynes rounded-full'>
+                            <span className="text-2xl">{name?.slice(0,1).toUpperCase()}</span>
+                        </div>
+                    </div>}
                 </div>
             </div>
         </nav>

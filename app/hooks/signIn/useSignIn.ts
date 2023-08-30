@@ -30,6 +30,7 @@ export const useSignIn = () =>{
         onSuccess: (res) =>{
             toast.dismiss();
             Cookies.set('SPECIALNOTES-AUTH', res?.authentication?.sessionToken)
+            Cookies.set('user-logged', JSON.stringify(res))
             router.push('/home')
         },
         onError: (res) =>{
