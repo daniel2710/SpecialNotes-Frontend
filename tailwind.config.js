@@ -5,6 +5,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'bg-rich-black',
+    'bg-cherry-red',
+    'bg-cliff-blue',
+    'bg-qahvei-brown',
+  ],
   theme: {
     extend: {
       colors: {
@@ -13,7 +19,7 @@ module.exports = {
         "rich-black": '#171a21',
         "paynes": '#617073',
         // UI
-        "alert": "#e31010",
+        "alert": "#FE0000",
         "success": "#07e633",
         "hoverBlack": "#333333",
         // Options bg notes:
@@ -24,6 +30,6 @@ module.exports = {
     },
   },
   plugins: [
- 
+    require("daisyui")
   ]
 }

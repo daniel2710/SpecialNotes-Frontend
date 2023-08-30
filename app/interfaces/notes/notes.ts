@@ -10,6 +10,7 @@ export interface Notes {
 export interface Settings {
     archived?:        boolean;
     pinned?:          boolean;
+    active?:          boolean;
     backgroundColor?: string;
     _id?:             string;
 }

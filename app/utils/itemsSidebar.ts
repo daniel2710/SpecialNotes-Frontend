@@ -5,8 +5,7 @@ import { IconType } from 'react-icons/lib';
 
 export const iconMappings: { [key: string]: IconType } = {
     BiSolidNote,
-    BiSolidArchiveIn,
-    BsTrash3Fill,
+    BiSolidArchiveIn
 };
 
 type SidebarItem = {
@@ -25,10 +24,5 @@ export const itemsSidebar: SidebarItem[] = [
         icon: 'BiSolidArchiveIn',
         title: 'Archive',
         route: '/archive'
-    },
-    {
-        icon: 'BsTrash3Fill',
-        title: 'Trash',
-        route: '/trash'
-    },
+    }
 ]
