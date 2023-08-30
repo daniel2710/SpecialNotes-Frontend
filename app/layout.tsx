@@ -1,5 +1,4 @@
 "use client"
-import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import Providers from './utils/reactQuery/Provider';
 import './globals.css'
@@ -8,11 +7,10 @@ import { useEffect } from 'react';
 
 const poppins = Poppins({ style: 'normal', weight: [ '100', '200', '300', '400', '500', '700', '800'], subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'SpecialNotes',
-  description: 'Application created by the developer Daniel De Avila, all rights reserved',
-  
-}
+// export const metadata: Metadata = {
+//   title: 'SpecialNotes',
+//   description: 'Application created by the developer Daniel De Avila, all rights reserved',
+// }
 
 export default function RootLayout({
   children,
